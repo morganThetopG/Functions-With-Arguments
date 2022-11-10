@@ -3,8 +3,8 @@ import time;
 import os;
 
 #argument number
-output=0
-
+list=[]
+total=0
 #the print function
 def morg(T):
     print(str(T))
@@ -13,10 +13,14 @@ def morg(T):
 
 #the add and clear terminal function
 def func():
-    global output
-    output+=1
-    if output>=101:
-        output=0
-        os.system('cls')
-    morg(output)
+    global total
+    usr=float(input("GIVE A NUMBER: "))
+    total=total+usr
+    list.append(usr)
+    print("\n"+str(list)+"\n")
+    ext=input("Add All Numbers? Y/N: ")
+    if ext=="y":
+        morg(total)
+    else:
+        func()
 func()
