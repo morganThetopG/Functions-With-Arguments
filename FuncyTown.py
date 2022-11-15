@@ -1,26 +1,9 @@
-#imports
-import time;
-import os;
+def myfunction(x1,x2,x3):
+    return x1+x2+x3
 
-#argument number
-list=[]
-total=0
-#the print function
-def morg(T):
-    print(str(T))
-    time.sleep(0.1)
-    func()
 
-#the add and clear terminal function
-def func():
-    global total
-    usr=float(input("GIVE A NUMBER: "))
-    total=total+usr
-    list.append(usr)
-    print("\n"+str(list)+"\n")
-    ext=input("Add All Numbers? Y/N: ")
-    if ext=="y":
-        morg(total)
-    else:
-        func()
-func()
+arglist = [1,2,3,4,5,6,7,8,9]
+for _ in range(3):
+    print(myfunction(arglist[_+0],arglist[_+1],arglist[_+2]))
+    #remove used arguments from the list 
+    arglist= arglist[2:] 
